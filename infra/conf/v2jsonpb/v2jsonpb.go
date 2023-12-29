@@ -1,6 +1,7 @@
 package v2jsonpb
 
 import (
+    "log"
 	"io"
 
 	"google.golang.org/protobuf/encoding/protojson"
@@ -41,10 +42,12 @@ func DumpV2JsonPb(config proto.Message) ([]byte, error) {
 const FormatProtobufV2JSONPB = "v2jsonpb"
 
 func init() {
+    log.Println("infra/conf/v2jsonpb/v2jsonpb.go:45 init")
 	common.Must(core.RegisterConfigLoader(&core.ConfigFormat{
 		Name:      []string{FormatProtobufV2JSONPB},
 		Extension: []string{".v2pb.json", ".v2pbjson"},
 		Loader: func(input interface{}) (*core.Config, error) {
+            log.Println(".v2pb.json loader called")
 			switch v := input.(type) {
 			case string:
 				r, err := cmdarg.LoadArg(v)

@@ -1,0 +1,45 @@
+2023/12/29 12:52:14 [Debug] app/log: Logger started
+2023/12/29 12:52:14 [Debug] app/stats: create new counter inbound>>>api>>>traffic>>>uplink
+2023/12/29 12:52:14 [Debug] app/stats: create new counter inbound>>>api>>>traffic>>>downlink
+2023/12/29 12:52:14 [Debug] app/proxyman/inbound: creating stream worker on 127.0.0.1:10085
+2023/12/29 12:52:14 [Debug] app/stats: create new counter inbound>>>dft>>>traffic>>>uplink
+2023/12/29 12:52:14 [Debug] app/stats: create new counter inbound>>>dft>>>traffic>>>downlink
+2023/12/29 12:52:14 [Debug] app/proxyman/inbound: creating stream worker on 127.0.0.1:10000
+2023/12/29 12:52:14 [Info] transport/internet/websocket: listening TCP(for WS) on 127.0.0.1:10000
+2023/12/29 12:52:14 [Info] transport/internet/tcp: listening TCP on 127.0.0.1:10085
+2023/12/29 12:52:14 [Info] app/commander: failed to remove existing handler
+2023/12/29 12:52:14 [Warning] V2Ray 5.13.0 started
+2023/12/29 12:52:21 [Debug] app/log: Logger closing
+2023/12/29 13:12:09 [Debug] app/log: Logger started
+2023/12/29 13:12:09 [Debug] app/stats: create new counter inbound>>>api>>>traffic>>>uplink
+2023/12/29 13:12:09 [Debug] app/stats: create new counter inbound>>>api>>>traffic>>>downlink
+2023/12/29 13:12:09 [Debug] app/proxyman/inbound: creating stream worker on 127.0.0.1:10085
+2023/12/29 13:12:09 [Debug] app/stats: create new counter inbound>>>dft>>>traffic>>>uplink
+2023/12/29 13:12:09 [Debug] app/stats: create new counter inbound>>>dft>>>traffic>>>downlink
+2023/12/29 13:12:09 [Debug] app/proxyman/inbound: creating stream worker on 127.0.0.1:10000
+2023/12/29 13:12:09 [Info] transport/internet/websocket: listening TCP(for WS) on 127.0.0.1:10000
+2023/12/29 13:12:09 [Info] transport/internet/tcp: listening TCP on 127.0.0.1:10085
+2023/12/29 13:12:09 [Info] app/commander: failed to remove existing handler
+2023/12/29 13:12:09 [Warning] V2Ray 5.13.0 started
+2023/12/29 13:12:40 [Debug] app/log: Logger started
+2023/12/29 13:12:40 [Debug] app/stats: create new counter inbound>>>api>>>traffic>>>uplink
+2023/12/29 13:12:40 [Debug] app/stats: create new counter inbound>>>api>>>traffic>>>downlink
+2023/12/29 13:12:40 [Debug] app/proxyman/inbound: creating stream worker on 127.0.0.1:10085
+2023/12/29 13:12:40 [Debug] app/stats: create new counter inbound>>>dft>>>traffic>>>uplink
+2023/12/29 13:12:40 [Debug] app/stats: create new counter inbound>>>dft>>>traffic>>>downlink
+2023/12/29 13:12:40 [Debug] app/proxyman/inbound: creating stream worker on 127.0.0.1:10000
+2023/12/29 13:42:20 [Info] transport/internet/tcp: listening TCP on 127.0.0.1:10085
+2023/12/29 13:42:21 [Info] transport/internet/websocket: listening TCP(for WS) on 127.0.0.1:10000
+2023/12/29 14:01:55 [Info] app/commander: failed to remove existing handler
+2023/12/29 14:02:24 [Warning] V2Ray 5.13.0 started
+2023/12/29 14:05:07 [Debug] app/log: Logger started
+2023/12/29 14:05:07 [Debug] app/stats: create new counter inbound>>>api>>>traffic>>>uplink
+2023/12/29 14:05:07 [Debug] app/stats: create new counter inbound>>>api>>>traffic>>>downlink
+2023/12/29 14:05:07 [Debug] app/proxyman/inbound: creating stream worker on 127.0.0.1:10085
+2023/12/29 14:05:07 [Debug] app/stats: create new counter inbound>>>dft>>>traffic>>>uplink
+2023/12/29 14:05:07 [Debug] app/stats: create new counter inbound>>>dft>>>traffic>>>downlink
+2023/12/29 14:05:07 [Debug] app/proxyman/inbound: creating stream worker on 127.0.0.1:10000
+2023/12/29 14:05:07 [Info] transport/internet/websocket: listening TCP(for WS) on 127.0.0.1:10000
+2023/12/29 14:05:07 [Info] transport/internet/tcp: listening TCP on 127.0.0.1:10085
+2023/12/29 14:05:07 [Info] app/commander: failed to remove existing handler
+2023/12/29 14:05:07 [Warning] V2Ray 5.13.0 started

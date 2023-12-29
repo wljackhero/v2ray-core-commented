@@ -3,6 +3,7 @@ package mergers
 //go:generate go run github.com/v2fly/v2ray-core/v5/common/errors/errorgen
 
 import (
+    "log"
 	"strings"
 
 	core "github.com/v2fly/v2ray-core/v5"
@@ -11,6 +12,7 @@ import (
 )
 
 func init() {
+    log.Println("infra/conf/mergers/mergers.go:15 init")
 	common.Must(RegisterMerger(makeMerger(
 		core.FormatJSON,
 		[]string{".json", ".jsonc"},
@@ -55,6 +57,7 @@ func RegisterMerger(format *Merger) error {
 	if _, found := mergersByName[format.Name]; found {
 		return newError(format.Name, " already registered.")
 	}
+    log.Printf("infra/conf/mergers/mergers.go:59 RegisterMerger reg %v\n", format.Name)
 	mergersByName[format.Name] = format
 
 	for _, ext := range format.Extensions {
@@ -62,6 +65,7 @@ func RegisterMerger(format *Merger) error {
 		if f, found := mergersByExt[lext]; found {
 			return newError(ext, " already registered to ", f.Name)
 		}
+        log.Printf("infra/conf/mergers/mergers.go:67 RegisterMerger reg ext %v\n", lext)
 		mergersByExt[lext] = format
 	}
 

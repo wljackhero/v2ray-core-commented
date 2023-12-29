@@ -74,7 +74,7 @@ func setConfigFlags(cmd *base.Command) {
 }
 
 func executeRun(cmd *base.Command, args []string) {
-	setConfigFlags(cmd)
+	setConfigFlags(cmd)  // pares all command line paremeters
 	cmd.Flag.Parse(args)
 	printVersion()
 	configFiles = getConfigFilePath()

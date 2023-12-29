@@ -1,7 +1,7 @@
 package core
 
 import (
-	"fmt"
+    "fmt"
 	"io"
 	"log"
 	"os"
@@ -53,6 +53,7 @@ func RegisterConfigLoader(format *ConfigFormat) error {
 		if _, found := configLoaderByName[name]; found {
 			return newError(name, " already registered.")
 		}
+        log.Printf("config.go:56 RegisterConfigLoader reg configLoaderByName %v\n", name)
 		configLoaderByName[name] = format
 	}
 
@@ -61,6 +62,7 @@ func RegisterConfigLoader(format *ConfigFormat) error {
 		if f, found := configLoaderByExt[lext]; found {
 			return newError(ext, " already registered to ", f.Name)
 		}
+        log.Printf("config.go:65 RegisterConfigLoader reg configLoaderByExt %v\n", lext)
 		configLoaderByExt[lext] = format
 	}
 	configLoaders = append(configLoaders, format)
@@ -199,10 +201,12 @@ func loadProtobufConfig(data []byte) (*Config, error) {
 }
 
 func init() {
+    log.Println("config.go:204 init")
 	common.Must(RegisterConfigLoader(&ConfigFormat{
 		Name:      []string{FormatProtobuf, FormatProtobufShort},
 		Extension: []string{".pb"},
 		Loader: func(input interface{}) (*Config, error) {
+            log.Println(".pb loader called")
 			switch v := input.(type) {
 			case string:
 				r, err := cmdarg.LoadArg(v)

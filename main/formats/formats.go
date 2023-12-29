@@ -1,6 +1,7 @@
 package formats
 
 import (
+    "log"
 	"bytes"
 
 	core "github.com/v2fly/v2ray-core/v5"
@@ -11,6 +12,7 @@ import (
 )
 
 func init() {
+    log.Println("main/formats/formats.go:15 init")
 	for _, formatName := range mergers.GetAllNames() {
 		loader, err := makeMergeLoader(formatName)
 		if err != nil {
@@ -19,6 +21,7 @@ func init() {
 		if formatName == core.FormatAuto {
 			loader.Extension = nil
 		}
+        log.Printf("main/formats/formats.go:23 formats register %v\n", formatName)
 		common.Must(core.RegisterConfigLoader(loader))
 	}
 }

@@ -1,12 +1,15 @@
 package main
 
 import (
+    "log"
 	"github.com/v2fly/v2ray-core/v5/main/commands"
 	"github.com/v2fly/v2ray-core/v5/main/commands/base"
 	_ "github.com/v2fly/v2ray-core/v5/main/distro/all"
 )
 
 func main() {
+    log.SetFlags(log.Llongfile)
+    log.Println("main starts")
 	base.RootCommand.Long = "A unified platform for anti-censorship."
 	base.RegisterCommand(commands.CmdRun)
 	base.RegisterCommand(commands.CmdVersion)

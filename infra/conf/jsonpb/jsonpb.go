@@ -1,6 +1,7 @@
 package jsonpb
 
 import (
+    "log"
 	"bytes"
 	"io"
 
@@ -42,10 +43,12 @@ func DumpJSONPb(config proto.Message, w io.Writer) error {
 const FormatProtobufJSONPB = "jsonpb"
 
 func init() {
+    log.Println("infra/conf/jsonpb/jsonpb.go:46 init")
 	common.Must(core.RegisterConfigLoader(&core.ConfigFormat{
 		Name:      []string{FormatProtobufJSONPB},
 		Extension: []string{".pb.json", ".pbjson"},
 		Loader: func(input interface{}) (*core.Config, error) {
+            log.Println(".pb.json loader called")
 			switch v := input.(type) {
 			case string:
 				r, err := cmdarg.LoadArg(v)

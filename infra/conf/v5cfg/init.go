@@ -1,6 +1,7 @@
 package v5cfg
 
 import (
+    "log"
 	"bytes"
 	"io"
 
@@ -14,10 +15,12 @@ import (
 const jsonV5 = "jsonv5"
 
 func init() {
+    log.Println("infra/conf/v5cfg/init.go:18 init")
 	common.Must(core.RegisterConfigLoader(&core.ConfigFormat{
 		Name:      []string{jsonV5},
 		Extension: []string{".v5.json", ".v5.jsonc"},
 		Loader: func(input interface{}) (*core.Config, error) {
+            log.Println(".v5.json loader called")
 			switch v := input.(type) {
 			case string:
 				r, err := cmdarg.LoadArg(v)
